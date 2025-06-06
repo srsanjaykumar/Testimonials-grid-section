@@ -25,13 +25,27 @@ body {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
+.container {
+  max-width: 90%;
+  margin: 3rem auto;
+  /* padding: 2rem; */
+  display: grid;
+  gap: 1.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-areas:
+    "one one two five"
+    "three four four five";
+    grid-template-rows: auto;
+}
+
 img {
   max-width: 2.2rem;
   border-radius: 50%;
   height: auto;
 }
-.items{
-    padding: 1.5rem;
+.items {
+  
+  border-radius: 0.5rem;
 }
 .profile {
   display: flex;
@@ -39,13 +53,12 @@ img {
   gap: 1rem;
 }
 
-.items .details h3{
-    margin: 0.3rem 0;
+.items .details h3 {
+  margin: 0 0 0.3rem;
 }
-.items h2{
-    margin: 1rem 0;
+.items h2 {
+  margin: 1rem 0;
 }
-
 
 .item1 img,
 .item4 img {
@@ -80,10 +93,10 @@ img {
   color: var(--grey-500);
 }
 
-
 .item1 h2,
 .item2 h2,
 .item4 h2 {
+    font-size: 1.2rem;
   font-weight: 600;
   color: var(--white);
 }
@@ -96,28 +109,42 @@ img {
 .item2 p,
 .item4 p {
   font-size: 1rem;
-
   color: var(--white);
 }
-
-
+.item3 p,
+.item5 p {
+  font-size: 1rem;
+  color: var(--grey-500);
+}
 
 .item1 {
+  grid-area: one;
   background: url(./images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: top 0 right 5rem;
   background-size: 7rem;
   background-color: var(--purple-500);
+  padding: 1.8rem;
+  padding-top: 2rem;
 }
 .item2 {
+  grid-area: two;
   background-color: var(--grey-500);
+  padding: 1.8rem;
 }
 .item3 {
+  grid-area: three;
   background-color: var(--white);
+  padding: 1.8rem;
 }
 .item4 {
+  grid-area: four;
   background-color: var(--dark-blue);
+  padding: 1.8rem;
+  padding-top: 2rem;
 }
 .item5 {
+  grid-area: five;
   background-color: var(--white);
+  padding: 1.8rem ;
 }
